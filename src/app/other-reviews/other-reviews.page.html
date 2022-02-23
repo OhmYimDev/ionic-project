@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar class="bg">
+    <ion-icon slot="start" routerLink="/main" class="icon-back" name="arrow-back-outline">
+    </ion-icon>
+    <h2 class="txt-head">รีวิว สถานที่ท่องเที่ยวอื่นๆ</h2>
+    <ion-icon slot="end" class="icon-bookmark" name="bookmarks-outline"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg">
+  <ion-list>
+    <ion-item  *ngFor="let items of result">
+      <p class="txt-head">{{items.attr_name}}</p>
+      <ion-button slot="end" (click)="goToPage(items.attr_name)"  class="bt-sign">ดูรีวิว</ion-button>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

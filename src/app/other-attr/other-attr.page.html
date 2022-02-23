@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar class="bg">
+    <ion-icon slot="start" routerLink="/other-reviews" class="icon-back" name="arrow-back-outline">
+    </ion-icon>
+    <h2 class="txt-head">รีวิว สถานที่ท่องเที่ยวอื่นๆ</h2>
+    <ion-icon slot="end" class="icon-bookmark" name="bookmarks-outline"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card class="card" *ngFor="let items of result">
+            <img class="img" src="https://www.comdept.cmru.ac.th/60143227/images/{{items.name_image}}" alt="">
+            <p class="txt">ผู้รีวิว : {{items.username}}</p>
+            <p class="txt">สถานที่ท่องเที่ยวแนะนำ : {{items.attr_name}}</p>
+            <p class="txt">ที่ตั้ง : {{items.locationn}}</p>
+            <p class="txt">หัวเรื่องรีวิว : {{items.header}}</p>
+            <p class="txt">รายละเอียดรีวิว : {{items.detail}}</p>
+            <div *ngIf="checkUser(items.username)==true">
+              <ion-button class="txt-edit" (click)="editArticle(items.id_article)">แก้ไข</ion-button>
+              <ion-button class="txt-delete" (click)="deleteArticle(items.id_article)">ลบ</ion-button>
+            </div>
+          </ion-card>
+      </ion-col>
+    </ion-row>
+
+
+  </ion-grid>
+</ion-content>

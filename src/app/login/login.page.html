@@ -1,0 +1,60 @@
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@500&family=Kanit:wght@100;200&display=swap" rel="stylesheet">
+
+<ion-content class="bg">
+<ion-grid>
+  <ion-row class="bt-back-margin">
+    <ion-col >
+      <ion-icon routerLink="/home" class="icon-back" name="arrow-back-outline"></ion-icon>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col class="text-head">
+      เข้าสู่ระบบ
+    </ion-col>
+  </ion-row>
+  
+  <ion-row >
+    <ion-col class="icon-center">
+      <img  src="/assets/images/logo-login1.png" alt="">
+    </ion-col>
+  </ion-row>
+
+
+  <ion-row>
+    <ion-col>
+      <ion-input type="text" class="input-user" placeholder=": Username" [(ngModel)]="login.username">
+        <ion-icon class="icon-person" name="person" slot="start"></ion-icon>
+      </ion-input>    
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col >
+      <ion-input type="password" class="input-pass" placeholder=": Password" [(ngModel)]="login.password"> 
+        <ion-icon class="icon-lock" name="lock-closed" slot="start"></ion-icon>
+      </ion-input>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col class="icon-center">
+      <ion-button (click)="Login()"  class="bt-sign"  >ตกลง
+      </ion-button>    
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+        <p class="already">Don't have an account?</p>
+        <p class="txt-signup" routerLink="/signup">sign up</p>
+    </ion-col>
+  </ion-row>
+
+
+</ion-grid>
+</ion-content>
+
+
+
+
+

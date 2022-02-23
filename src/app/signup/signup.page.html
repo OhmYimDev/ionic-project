@@ -1,0 +1,82 @@
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@500&family=Kanit:wght@100;200&display=swap" rel="stylesheet">
+
+<ion-content class="bg">
+  <ion-grid>
+    <ion-row class="bt-back-margin">
+      <ion-col >
+        <ion-icon routerLink="/home" class="icon-back" name="arrow-back-outline"></ion-icon>
+      </ion-col>
+    </ion-row>
+  
+    <ion-row>
+      <ion-col class="text-head">
+        สมัครสมาชิก
+      </ion-col>
+    </ion-row>
+
+
+    <ion-row >
+      <ion-col class="icon-center">
+        <img  src="/assets/images/logo-signup1.png" alt="">
+      </ion-col>
+    </ion-row>
+
+
+    <ion-row>
+      <ion-col >
+        <ion-input class="input-user" placeholder=": Username" [(ngModel)]="signup.username">
+          <ion-icon class="icon-person" name="person" slot="start"></ion-icon>
+        </ion-input>
+      </ion-col>
+    </ion-row>
+  
+    <ion-row>
+      <ion-col>
+        <ion-input class="input-pass" placeholder=": Password" [(ngModel)]="signup.password">
+          <ion-icon class="icon-lock" name="lock-closed" slot="start"></ion-icon>
+        </ion-input>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-input class="input-pass" placeholder=": Firstname" [(ngModel)]="signup.firstname">
+          <ion-icon class="icon-person" name="person" slot="start"></ion-icon>
+        </ion-input>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-input class="input-pass" placeholder=": Lastname" [(ngModel)]="signup.lastname">
+          <ion-icon class="icon-person" name="person" slot="start"></ion-icon>
+        </ion-input>
+      </ion-col>
+    </ion-row>
+
+  
+    <ion-row>
+      <ion-col >
+        <ion-input type="number" class="input-pass" placeholder=": Phone number" [(ngModel)]="signup.phonenumber">
+          <ion-icon class="icon-lock" name="call" slot="start"></ion-icon>
+        </ion-input>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col class="icon-center">
+        <ion-button (click)="Signup()" class="bt-sign"  >ตกลง</ion-button>    
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+          <p class="already">Already have an account?</p>
+          <p class="txt-login" routerLink="/login">Login</p>
+      </ion-col>
+    </ion-row>
+  
+  </ion-grid>
+</ion-content>

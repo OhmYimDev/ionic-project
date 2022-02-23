@@ -1,27 +1,95 @@
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
+.bt {
+  --background: #F15050;
+  height: 50px;
+  width: 300px;
+  font-family: 'Kanit', sans-serif;
   font-size: 16px;
-  line-height: 22px;
+  font-weight: 600;
+  color: #000000;
 
-  color: #8c8c8c;
-
-  margin: 0;
 }
 
-#container a {
-  text-decoration: none;
+.bt-color-login{
+  --background:#05E274;
+  height: 50px;
+  width: 300px;
+  font-family: 'Kanit', sans-serif;
+  font-size: 16px;
+  color: #000000;
+  font-weight: 600;
+  // margin-top: 10px;
 }
+
+.or{
+  color: white;
+  font-size: 16px;
+  text-align: center;
+}
+
+.bg{
+    // --background: url('/assets/images/wallpaper.jpg') no-repeat center/cover fixed;
+  --background : #232323;
+}
+
+.appname {
+  color:#ffffff  ;
+  font-size: 30px;
+  text-align: center;
+  font-family: 'Baloo Tammudu 2', cursive;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 500;
+}
+
+.appname1{
+  color:#ffffff ;
+  font-size: 18px;
+  text-align: center;
+  font-family: 'Baloo Tammudu 2', cursive;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 500;
+}
+
+.appname2{
+  color:#ffffff ;
+  font-size: 18px;
+  text-align: center;
+  font-family: 'Baloo Tammudu 2', cursive;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 500;
+  margin-top: 40px;
+}
+
+.txt-version {
+  color:#ffffff ;
+  font-size: 18px;
+  text-align: center;
+  font-family: 'Baloo Tammudu 2', cursive;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 500;
+}
+
+// .row {
+//   // margin-top: 50px;
+// }
+
+.col {
+  text-align: center;
+}
+
+.row1 {
+  margin-top: 100px;
+}
+
+
+.rowIcon {
+  margin-top: 80px;
+}
+
+.icon-app{
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: -40px;
+}
+
+
+

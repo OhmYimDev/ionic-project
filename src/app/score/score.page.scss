@@ -1,0 +1,68 @@
+.bg {
+    // --background:url('/assets/images/score3.jpg') no-repeat center/cover fixed;
+    --background:white;
+}
+
+.toolbar{
+    --background:url('/assets/images/score3.jpg') no-repeat center/cover fixed;
+}
+
+
+
+.txt-head {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.txt-lable {
+    color: rgb(0, 0, 0);
+    font-family: 'Kanit', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.bt-menu{
+    color: rgb(255, 255, 255);
+}
+
+.bt {
+    width: 20px;
+    height: 30px;
+    --background: rgba(255, 0, 0);
+    margin-left: 10px;
+}
+
+.margin {
+    margin-top: 30px;
+}
+
+.img {
+    width: 70px;
+    height: 70px;
+}
+
+.txt {
+    padding:15px;
+    font-size: 18px;
+}
+
+.item {
+    --background: rgba(255,
+     255, 255);
+
+}
+
+.score_txt {
+    text-align: right;
+    // font-family: 'Kanit', sans-serif;
+    // font-size: 18px;
+    // color: rgb(0, 0, 0);
+    // font-weight: 600;
+}
+
+
+
+

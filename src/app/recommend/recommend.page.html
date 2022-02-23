@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar class="bg">
+    <ion-icon slot="start" routerLink="/main" class="icon-back" name="arrow-back-outline">
+    </ion-icon>
+    <h2 class="txt-head">เขียนรีวิวสถานที่ท่องเที่ยวอื่นๆ</h2>
+    <ion-icon slot="end" class="icon-bookmark" name="bookmarks-outline"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-textarea   type="text" class="input-detail" placeholder=": สถานที่ท่องเที่ยว" [(ngModel)]="re.attrName">
+        </ion-textarea>
+
+        <ion-textarea type="text" class="input-detail" placeholder=": ที่ตั้ง" [(ngModel)]="re.location">
+        </ion-textarea>
+
+
+        <ion-textarea type="text" class="input-detail" placeholder=": หัวเรื่องรีวิว" [(ngModel)]="re.header">
+        </ion-textarea>
+
+        <ion-textarea type="text" class="input-detail" placeholder=": รายระเอียดรีวิว" [(ngModel)]="re.detail">
+        </ion-textarea>
+
+      </ion-col>
+    </ion-row>
+    
+    <ion-row>
+      <ion-col>
+        <ion-input type="file" [(ngModel)]="re.img" (change)="selectedFile($event)">
+          <ion-button class="bt-ok" (click)="onClick()">ตกลง</ion-button>
+        </ion-input>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>
+

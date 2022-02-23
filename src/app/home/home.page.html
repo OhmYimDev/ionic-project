@@ -1,20 +1,59 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@500&family=Kanit:wght@100;200&display=swap" rel="stylesheet">
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="bg">
+  
+  <ion-grid class="grid">
+    
+    <ion-row>
+      <ion-col class="appname2">
+       Welcome to 
+      </ion-col> 
+    </ion-row>
+    
+    <ion-row class="row">
+      <ion-col  class="appname">
+        Attractions paper
+      </ion-col> 
+    </ion-row>
+    
+    <ion-row>
+      <ion-col class="appname1">
+        It's always time to travel
+      </ion-col> 
+    </ion-row>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <ion-row >
+      <ion-col class="icon-app">
+        <img  src="/assets/images/logo1.png" alt="">
+      </ion-col>
+    </ion-row>
+
+    
+    <ion-row class="row1">
+      <ion-col class="col">
+        <ion-button routerLink="/signup"  class="bt">
+          สมัครสมาชิก
+        </ion-button>  
+      </ion-col>
+    </ion-row> 
+
+    <p class="or">หรือ</p>
+    
+    <ion-row>
+     <ion-col class="col">
+        <ion-button routerLink="/login"  class="bt-color-login">
+          เข้าสู่ระบบ
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <p class="txt-version">Version 1.0.0</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
 </ion-content>

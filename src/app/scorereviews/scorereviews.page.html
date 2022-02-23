@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar class="bg">
+    <ion-icon slot="start" routerLink="/main" class="icon-back" name="arrow-back-outline"></ion-icon>
+    <ion-title class="txt-head">อันดับคะแนนสถานที่ท่องเที่ยว</ion-title> 
+    <ion-icon slot="end" class="icon-bookmark" name="bookmarks-outline"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content class="bg">
+  
+  <ion-card class="card">
+      <ion-item *ngFor="let item of result">
+    <ion-label class="txt-lable">{{item.name_attr}}</ion-label> 
+    
+    <div *ngIf="item.score==0">
+      <ion-icon color="warning" name="star-outline"></ion-icon>
+      <ion-icon color="warning" name="star-outline" ></ion-icon>
+      <ion-icon color="warning" name="star-outline" ></ion-icon>
+      <ion-icon color="warning" name="star-outline" ></ion-icon>
+      <ion-icon color="warning" name="star-outline" ></ion-icon>
+    </div>
+    <div *ngIf="item.score==1">
+      <ion-icon color="warning" name="star" ></ion-icon>
+      <ion-icon color="warning" name="star-outline" ></ion-icon>
+      <ion-icon color="warning" name="star-outline" ></ion-icon>
+      <ion-icon color="warning" name="star-outline" ></ion-icon>
+      <ion-icon color="warning" name="star-outline" ></ion-icon>
+    </div>
+    <div *ngIf="item.score==2">
+      <ion-icon color="warning" name="star" ></ion-icon>
+      <ion-icon color="warning" name="star" ></ion-icon>
+      <ion-icon color="warning" name="star-outline" ></ion-icon>
+      <ion-icon color="warning" name="star-outline" ></ion-icon>
+      <ion-icon color="warning" name="star-outline" ></ion-icon>
+    </div>
+  
+    <div *ngIf="item.score==3">
+      <ion-icon color="warning" name="star" ></ion-icon>
+      <ion-icon color="warning" name="star" ></ion-icon>
+      <ion-icon color="warning" name="star" ></ion-icon>
+      <ion-icon color="warning" name="star-outline" ></ion-icon>
+      <ion-icon color="warning" name="star-outline" ></ion-icon>
+    </div>
+    <div *ngIf="item.score==4">
+      <ion-icon color="warning" name="star" ></ion-icon>
+      <ion-icon color="warning" name="star" ></ion-icon>
+      <ion-icon color="warning" name="star" ></ion-icon>
+      <ion-icon color="warning" name="star" ></ion-icon>
+      <ion-icon color="warning" name="star-outline" ></ion-icon>
+    </div>
+    <div *ngIf="item.score==5">
+      <ion-icon color="warning" name="star" ></ion-icon>
+      <ion-icon color="warning" name="star" ></ion-icon>
+      <ion-icon color="warning" name="star" ></ion-icon>
+      <ion-icon color="warning" name="star" ></ion-icon>
+      <ion-icon color="warning" name="star" ></ion-icon>
+    </div>
+
+  </ion-item>
+
+  </ion-card>
+</ion-content>

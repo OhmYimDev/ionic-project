@@ -1,0 +1,155 @@
+<ion-header>
+  <ion-toolbar class="bg">
+    <ion-icon slot="start" routerLink="/main" class="icon-back" name="arrow-back-outline"></ion-icon>
+    <ion-icon slot="end" class="icon-bookmark" name="bookmarks-outline"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="bg">
+  <ion-grid>
+
+    <ion-row>
+      <ion-col>
+        <ion-slides [options]="option" class="ion-margin-top">
+          <ion-slide>
+            <ion-card>
+              <img class="img" src="assets/images/phrasingh/วัดพระสิงห์1.jpg" />
+            </ion-card>
+          </ion-slide>
+
+          <ion-slide>
+            <ion-card>
+              <img class="img" src="assets/images/phrasingh/วัดพระสิงห์2.jpg" />
+            </ion-card>
+          </ion-slide>
+
+          <ion-slide>
+            <ion-card>
+              <img class="img" src="assets/images/phrasingh/วัดพระสิงห์3.jpg" />
+            </ion-card>
+          </ion-slide>
+
+          <ion-slide>
+            <ion-card>
+              <img class="img" src="assets/images/phrasingh/วัดพระสิงห์4.jpg" />
+            </ion-card>
+          </ion-slide>
+
+        </ion-slides>
+      </ion-col>
+    </ion-row>
+
+<ion-row>
+  <ion-col>
+    <div class="txt-head">วัดพระสิงห์วรมหาวิหาร</div>
+    <ion-button class="bt-link" (click)="openLinkInSystemBrowser('http://www.xn--72cai2bycvaff7a7amd2dk4ct9p7bwf5c.com/')">ข้อมูลเพิ่มเติม
+      <ion-icon slot="start" name="globe-outline"></ion-icon>
+    </ion-button>
+
+  </ion-col>
+</ion-row>
+
+<ion-row>
+  <ion-col>
+    <p class="txt3">คะแนนรีวิวจากผู้ใช้บริการ</p>
+  </ion-col>
+</ion-row>
+
+<ion-row class="row1">
+  <ion-col>
+    <div class="margin-star">
+        <div *ngIf="result==0">
+          <ion-icon class="icon-star" color="warning" name="star-outline"></ion-icon>
+          <ion-icon class="icon-star" color="warning" name="star-outline"></ion-icon>
+          <ion-icon class="icon-star" color="warning" name="star-outline"></ion-icon>
+          <ion-icon class="icon-star" color="warning" name="star-outline"></ion-icon>
+          <ion-icon class="icon-star" color="warning" name="star-outline"></ion-icon>
+        </div>
+        <div *ngIf="result==1">
+          <ion-icon class="icon-star" color="warning" name="star"></ion-icon>
+          <ion-icon class="icon-star" color="warning" name="star-outline"></ion-icon>
+          <ion-icon class="icon-star" color="warning" name="star-outline"></ion-icon>
+          <ion-icon class="icon-star" color="warning" name="star-outline"></ion-icon>
+          <ion-icon class="icon-star" color="warning" name="star-outline"></ion-icon>
+        </div>
+        <div *ngIf="result==2">
+          <ion-icon class="icon-star" color="warning" name="star"></ion-icon>
+          <ion-icon class="icon-star" color="warning" name="star"></ion-icon>
+          <ion-icon class="icon-star" color="warning" name="star-outline"></ion-icon>
+          <ion-icon class="icon-star" color="warning" name="star-outline"></ion-icon>
+          <ion-icon class="icon-star" color="warning" name="star-outline"></ion-icon>
+        </div>
+
+        <div *ngIf="result==3">
+          <ion-icon class="icon-star" color="warning" name="star"></ion-icon>
+          <ion-icon class="icon-star" color="warning" name="star"></ion-icon>
+          <ion-icon class="icon-star" color="warning" name="star"></ion-icon>
+          <ion-icon class="icon-star" color="warning" name="star-outline"></ion-icon>
+          <ion-icon class="icon-star" color="warning" name="star-outline"></ion-icon>
+        </div>
+        <div *ngIf="result==4">
+          <ion-icon class="icon-star" color="warning" name="star"></ion-icon>
+          <ion-icon class="icon-star" color="warning" name="star"></ion-icon>
+          <ion-icon class="icon-star" color="warning" name="star"></ion-icon>
+          <ion-icon class="icon-star" color="warning" name="star"></ion-icon>
+          <ion-icon class="icon-star" color="warning" name="star-outline"></ion-icon>
+        </div>
+        <div *ngIf="result==5">
+          <ion-icon class="icon-star" color="warning" name="star"></ion-icon>
+          <ion-icon class="icon-star" color="warning" name="star"></ion-icon>
+          <ion-icon class="icon-star" color="warning" name="star"></ion-icon>
+          <ion-icon class="icon-star" color="warning" name="star"></ion-icon>
+          <ion-icon class="icon-star" color="warning" name="star"></ion-icon>
+        </div>
+      </div>
+    </ion-col>
+    
+    <ion-col>
+      <p class="txt-count">({{count}} เรตติ้ง)</p>
+
+    </ion-col>
+</ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button routerLink="/checkin2" class="bt-checkin">
+          <ion-icon
+            slot="start"
+            class="icon-checkin"
+            name="location-outline"
+          ></ion-icon>
+          <p class="txt-checkin">เช็คอิน</p>
+        </ion-button>
+
+        <ion-button routerLink="/review2" class="bt-reviews">
+          <ion-icon
+            slot="start"
+            class="icon-reviews"
+            name="newspaper-outline"
+          ></ion-icon>
+          <p class="txt-reviews">รีวิว</p>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col *ngFor="let item of data_attr">
+        <ion-card class="card-color">
+          <h3 class="txt2">ข้อมูลสถานที่ท่องเที่ยว</h3>
+          <p class="data">{{item.data_attraction}}</p>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <!-- <ion-row >
+      <ion-col >
+        <ion-card class="card-color">
+          <h3 class="txt2">สถานที่ตั้ง</h3>
+          <p class="lt">
+            9 หมู่ที่ 9 อำเภอเมืองเชียงใหม่ เชียงใหม่ 50200        
+          </p>
+        </ion-card>
+      </ion-col>
+    </ion-row> -->
+  </ion-grid>
+</ion-content>

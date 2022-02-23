@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar class="toolbar">
+    <ion-icon slot="start" routerLink="/photharam" class="icon-back" name="arrow-back-outline">
+    </ion-icon>
+    <ion-lable  class="txt-toolbar">วัดโพธารามมหาวิหาร</ion-lable>
+    <ion-icon slot="end" class="icon-bookmark" name="bookmarks-outline"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="bg" [fullscreen]="true">
+
+  <div #map id="map"></div>
+  
+  <ion-grid>
+    
+    <ion-row>
+      <ion-col>
+        <p class="txt">เช็คอิน วัดโพธารามมหาวิหาร</p>
+        <p class="txt">ที่อยู่ : หมู่ที่ 2 90 อำเภอเมืองเชียงใหม่ เชียงใหม่ 50300</p>
+        <p class="txt">ผู้ใช้งาน : {{username}}</p>
+        <ion-button class="bt-ok" (click)="insertdata()" >เช็คอิน</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

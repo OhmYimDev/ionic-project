@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar class="toolbar">
+    <ion-icon slot="start" routerLink="/doisuthep" class="icon-back" name="arrow-back-outline">
+    </ion-icon>
+    <p class="txt-toolbar">วัดพระธาตุดอยสุเทพราชวรวิหาร</p>
+    <ion-icon slot="end" class="icon-bookmark" name="bookmarks-outline"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="bg" [fullscreen]="true">
+
+  <div #map id="map"></div>
+  
+  <ion-grid>
+    
+    <ion-row>
+      <ion-col>
+        <p class="txt">เช็คอิน วัดพระธาตุดอยสุเทพราชวรวิหาร</p>
+        <p class="txt">ที่อยู่ : ถนนศรีวิชัย ตำบลสุเทพ อำเภอเมือง จังหวัดเชียงใหม่ 50200
+          โทรศัพท์ 053-295-000</p>
+        <p class="txt">ผู้ใช้งาน : {{username}}</p>
+        <ion-button class="bt-ok" (click)="insertdata()" >เช็คอิน</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

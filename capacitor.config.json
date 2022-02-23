@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "attractionapp",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

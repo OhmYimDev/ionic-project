@@ -1,0 +1,193 @@
+<ion-header>
+  <ion-toolbar class="toolbar">
+    <ion-icon slot="start" routerLink="/chedi" class="icon-back" name="arrow-back-outline">
+    </ion-icon>
+    <h2 class="txt">รีวิว วัดเจดีย์หลวงวรวิหาร</h2>
+    <ion-icon slot="end" class="icon-bookmark" name="bookmarks-outline"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-slides [options]="option" class="ion-margin-top">
+          <ion-slide>
+            <ion-card>
+              <img class="img" src="assets/images/chedi/วัดเจดีย์หลวง1.jpg" />
+            </ion-card>
+          </ion-slide>
+
+          <ion-slide>
+            <ion-card>
+              <img class="img" src="assets/images/chedi/วัดเจดีย์หลวง2.jpg" />
+            </ion-card>
+          </ion-slide>
+
+          <ion-slide>
+            <ion-card>
+              <img class="img" src="assets/images/chedi/วัดเจดีย์หลวง3.jpg" />
+            </ion-card>
+          </ion-slide>
+
+          <ion-slide>
+            <ion-card>
+              <img class="img" src="assets/images/chedi/วัดเจดีย์หลวง4.jpg" />
+            </ion-card>
+          </ion-slide>
+        </ion-slides>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <p class="txt">วัดเจดีย์หลวงวรวิหาร</p>
+        <p class="txt">รีวิวจากผู้ใช้บริการ</p>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="row1">
+      <ion-col>
+        <div class="margin-star">
+          <div *ngIf="result==0">
+            <ion-icon class="icon-star" color="warning" name="star-outline"></ion-icon>
+            <ion-icon class="icon-star" color="warning" name="star-outline"></ion-icon>
+            <ion-icon class="icon-star" color="warning" name="star-outline"></ion-icon>
+            <ion-icon class="icon-star" color="warning" name="star-outline"></ion-icon>
+            <ion-icon class="icon-star" color="warning" name="star-outline"></ion-icon>
+          </div>
+          <div *ngIf="result==1">
+            <ion-icon class="icon-star" color="warning" name="star"></ion-icon>
+            <ion-icon class="icon-star" color="warning" name="star-outline"></ion-icon>
+            <ion-icon class="icon-star" color="warning" name="star-outline"></ion-icon>
+            <ion-icon class="icon-star" color="warning" name="star-outline"></ion-icon>
+            <ion-icon class="icon-star" color="warning" name="star-outline"></ion-icon>
+          </div>
+          <div *ngIf="result==2">
+            <ion-icon class="icon-star" color="warning" name="star"></ion-icon>
+            <ion-icon class="icon-star" color="warning" name="star"></ion-icon>
+            <ion-icon class="icon-star" color="warning" name="star-outline"></ion-icon>
+            <ion-icon class="icon-star" color="warning" name="star-outline"></ion-icon>
+            <ion-icon class="icon-star" color="warning" name="star-outline"></ion-icon>
+          </div>
+
+          <div *ngIf="result==3">
+            <ion-icon class="icon-star" color="warning" name="star"></ion-icon>
+            <ion-icon class="icon-star" color="warning" name="star"></ion-icon>
+            <ion-icon class="icon-star" color="warning" name="star"></ion-icon>
+            <ion-icon class="icon-star" color="warning" name="star-outline"></ion-icon>
+            <ion-icon class="icon-star" color="warning" name="star-outline"></ion-icon>
+          </div>
+          <div *ngIf="result==4">
+            <ion-icon class="icon-star" color="warning" name="star"></ion-icon>
+            <ion-icon class="icon-star" color="warning" name="star"></ion-icon>
+            <ion-icon class="icon-star" color="warning" name="star"></ion-icon>
+            <ion-icon class="icon-star" color="warning" name="star"></ion-icon>
+            <ion-icon class="icon-star" color="warning" name="star-outline"></ion-icon>
+          </div>
+          <div *ngIf="result==5">
+            <ion-icon class="icon-star" color="warning" name="star"></ion-icon>
+            <ion-icon class="icon-star" color="warning" name="star"></ion-icon>
+            <ion-icon class="icon-star" color="warning" name="star"></ion-icon>
+            <ion-icon class="icon-star" color="warning" name="star"></ion-icon>
+            <ion-icon class="icon-star" color="warning" name="star"></ion-icon>
+          </div>
+        </div>
+      </ion-col>
+
+      <ion-col>
+        <p class="txt-count">({{count}} รีวิว)</p>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="row1">
+      <ion-col>
+        <p class="txt">ผู้ใช้งาน : {{username}}</p>
+        <ion-input class="input-comment" type="text" placeholder=": ความคิดเห็น " [(ngModel)]="review.comment">
+          <ion-icon class="icon-pen" name="pencil-outline"></ion-icon>
+        </ion-input>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <p class="txt">ให้คะแนนสถานที่ท่องเที่ยว</p>
+        <ion-select class="score" [(ngModel)]="review.score">
+          <ion-select-option value="5">5 คะแนน</ion-select-option>
+          <ion-select-option value="4">4 คะแนน</ion-select-option>
+          <ion-select-option value="3">3 คะแนน</ion-select-option>
+          <ion-select-option value="2">2 คะแนน</ion-select-option>
+          <ion-select-option value="1">1 คะแนน</ion-select-option>
+        </ion-select>
+      </ion-col>
+    </ion-row>
+
+
+
+    <ion-row>
+      <ion-col class="col">
+        <ion-button class="bt-ok" (click)="insertdata()">ตกลง</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="review_bg" *ngFor="let item of data_review">
+      <ion-col>
+        <ion-card class="card-color">
+          <div class="txt-reviews">
+            <p>ผู้ใช้งาน : {{item.username}}</p>
+            <p>ความคิดเห็น : {{item.comment}}</p>
+            คะแนนรีวิว<div *ngIf="item.score==0">
+              <ion-icon class="icon-star" color="warning" name="star-outline"></ion-icon>
+              <ion-icon class="icon-star" color="warning" name="star-outline"></ion-icon>
+              <ion-icon class="icon-star" color="warning" name="star-outline"></ion-icon>
+              <ion-icon class="icon-star" color="warning" name="star-outline"></ion-icon>
+              <ion-icon class="icon-star" color="warning" name="star-outline"></ion-icon>
+            </div>
+            <div *ngIf="item.score==1">
+              <ion-icon class="icon-star" color="warning" name="star"></ion-icon>
+              <ion-icon class="icon-star" color="warning" name="star-outline"></ion-icon>
+              <ion-icon class="icon-star" color="warning" name="star-outline"></ion-icon>
+              <ion-icon class="icon-star" color="warning" name="star-outline"></ion-icon>
+              <ion-icon class="icon-star" color="warning" name="star-outline"></ion-icon>
+            </div>
+            <div *ngIf="item.score==2">
+              <ion-icon class="icon-star" color="warning" name="star"></ion-icon>
+              <ion-icon class="icon-star" color="warning" name="star"></ion-icon>
+              <ion-icon class="icon-star" color="warning" name="star-outline"></ion-icon>
+              <ion-icon class="icon-star" color="warning" name="star-outline"></ion-icon>
+              <ion-icon class="icon-star" color="warning" name="star-outline"></ion-icon>
+            </div>
+
+            <div *ngIf="item.score==3">
+              <ion-icon class="icon-star" color="warning" name="star"></ion-icon>
+              <ion-icon class="icon-star" color="warning" name="star"></ion-icon>
+              <ion-icon class="icon-star" color="warning" name="star"></ion-icon>
+              <ion-icon class="icon-star" color="warning" name="star-outline"></ion-icon>
+              <ion-icon class="icon-star" color="warning" name="star-outline"></ion-icon>
+            </div>
+            <div *ngIf="item.score==4">
+              <ion-icon class="icon-star" color="warning" name="star"></ion-icon>
+              <ion-icon class="icon-star" color="warning" name="star"></ion-icon>
+              <ion-icon class="icon-star" color="warning" name="star"></ion-icon>
+              <ion-icon class="icon-star" color="warning" name="star"></ion-icon>
+              <ion-icon class="icon-star" color="warning" name="star-outline"></ion-icon>
+            </div>
+            <div *ngIf="item.score==5">
+              <ion-icon class="icon-star" color="warning" name="star"></ion-icon>
+              <ion-icon class="icon-star" color="warning" name="star"></ion-icon>
+              <ion-icon class="icon-star" color="warning" name="star"></ion-icon>
+              <ion-icon class="icon-star" color="warning" name="star"></ion-icon>
+              <ion-icon class="icon-star" color="warning" name="star"></ion-icon>
+            </div>
+          </div>
+          <div *ngIf="checkUser(item.username)==true">
+            <ion-button class="txt-edit" (click)="editArticle(item.id_reviews)">แก้ไข</ion-button>
+            <ion-button class="txt-delete" (click)="deleteArticle(item.id_reviews)">ลบ</ion-button>
+          </div>
+
+
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

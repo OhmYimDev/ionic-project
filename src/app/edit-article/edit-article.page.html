@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar class="bg">
+    <ion-icon slot="start" routerLink="/other-reviews" class="icon-back" name="arrow-back-outline">
+    </ion-icon>
+    <h2 class="txt-head">แก้ไข บทความรีวิวสถานที่ท่องเที่ยว</h2>
+    <ion-icon slot="end" class="icon-bookmark" name="bookmarks-outline"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg">
+  <ion-grid>
+    <ion-row>
+      <ion-col >
+        <div >
+          <ion-textarea   type="text" class="input-detail"  [(ngModel)]="attr_name">
+          </ion-textarea>
+  
+          <ion-textarea type="text" class="input-detail"  [(ngModel)]="location">
+          </ion-textarea>
+  
+  
+          <ion-textarea type="text" class="input-detail"  [(ngModel)]="header">
+          </ion-textarea>
+  
+          <ion-textarea type="text" class="input-detail"  [(ngModel)]="detail">
+          </ion-textarea>
+          </div>  
+        </ion-col>
+      </ion-row>
+    
+    <ion-row>
+      <ion-col>
+            <ion-button class="bt-ok" (click)="editArticle()">ตกลง</ion-button>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>
+

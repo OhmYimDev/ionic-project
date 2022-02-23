@@ -1,0 +1,129 @@
+.bg {
+    // --background:url('/assets/images/wallpaper.jpg') no-repeat center/cover fixed;
+    // font-family: 'Kanit', sans-serif;
+    --background: #232323;
+}
+
+.input-user {
+    color: #000000;
+    height: 50px;
+    --background: rgb(255, 255, 255);
+    margin-top: 20px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    // border: solid 2px #5FA5B8;
+}
+
+.input-pass {
+    margin-top: 10px;
+    color: #000000;
+    height: 50px;
+    --background: rgb(255, 255, 255);
+    font-family: 'Kanit', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    // border: solid 2px #5FA5B8;
+
+}
+
+.icon-person {
+    color: rgba(0, 0, 0, 0.87);
+    padding-left: 20px;   
+    height: 20px;
+    width: 20px;
+}
+
+.icon-lock{
+    color: rgba(0, 0, 0, 0.87);
+    padding-left: 20px; 
+    height: 20px;
+    width: 20px;
+}
+
+.bt-sign {
+    --background:#05E274;
+    color: rgb(0, 0, 0);
+    font-family: 'Kanit', sans-serif;
+    font-weight: 600;
+    height: 50px;
+    width:300px;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.text-head{
+    text-align: center;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    font-family: 'Kanit', sans-serif;
+}
+
+.already{
+    text-align: center;
+    font-size: 16px;
+    margin-top: 10px;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    font-family: 'Kanit', sans-serif;
+    
+}
+
+.txt-signup{
+    text-align: center;
+    font-size: 16px;
+    margin-top: 10px;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    font-family: 'Kanit', sans-serif;
+    
+}
+
+
+.bt-back-margin {
+    margin-top: 30px;
+    color: rgb(255, 255, 255);
+}
+
+
+.icon-center {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.alertDanger{
+    --background-color: white;
+    color: red;
+    button{
+        color: red;
+    }
+}
+
+.icon-back {
+    // margin-top: 20px;
+    color: rgb(255, 255, 255);
+    margin-left: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+
+
+.icon-login-center{
+    text-align: center;
+}
+
+// .icon-login{
+//     height: 150px;
+//     width: 150px;
+// }
+
+
+
+
+
+
+
+
+

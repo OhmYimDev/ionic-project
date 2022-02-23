@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar class="bg">
+    <ion-icon slot="start" routerLink="/doisuthep" class="icon-back" name="arrow-back-outline">
+    </ion-icon>
+    <h2 class="txt">แก้ไขรีวิวสถานที่ท่องเที่ยว</h2>
+    <ion-icon slot="end" class="icon-bookmark" name="bookmarks-outline"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="bg">
+  <ion-grid>
+    <ion-row class="row1">
+      <ion-col *ngFor="let item of review"><br>
+        <p class="txt">ผู้ใช้งาน : {{item.username}}</p>
+        <ion-textarea class="input-comment" type="text"  [(ngModel)]="comment">
+        </ion-textarea>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <p class="txt">ให้คะแนนสถานที่ท่องเที่ยว</p>
+        <ion-select class="score" [(ngModel)]="score">
+          <ion-select-option value="5">5 คะแนน</ion-select-option>
+          <ion-select-option value="4">4 คะแนน</ion-select-option>
+          <ion-select-option value="3">3 คะแนน</ion-select-option>
+          <ion-select-option value="2">2 คะแนน</ion-select-option>
+          <ion-select-option value="1">1 คะแนน</ion-select-option>
+        </ion-select>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col class="col">
+        <ion-button class="bt-ok" (click)="updateReview()">ตกลง</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

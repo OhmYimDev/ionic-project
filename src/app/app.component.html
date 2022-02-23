@@ -1,3 +1,64 @@
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@500&family=Kanit:wght@100;200&display=swap" rel="stylesheet">
+
+<!-- <script src="https://maps.googleapis.com/map/api/js?key=AIzaSyCRYEO0HAGm9OT7JUOO0Rnwap0zKlye5_k" async defer></script> -->
+
+
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu menuId="main-menu" content-id="main">
+    <ion-header>
+      <ion-toolbar class="toolbar">
+        <ion-title class="title">เมนู</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="bg-ct">
+        <ion-item  routerLink="/scorereviews">
+          <ion-icon  class="menu-color" name="star-outline" slot="start"></ion-icon>
+            <ion-label class="lable">คะแนนสถานที่ท่องเที่ยว</ion-label>
+        </ion-item> 
+
+        <ion-item  routerLink="/chant">
+          <ion-icon class="menu-color" name="library-outline"  slot="start"></ion-icon>          
+          <ion-label class="lable">บทสวดมนต์</ion-label>
+        </ion-item> 
+
+        <ion-item  routerLink="/virtue">
+          <ion-icon class="menu-color" name="sparkles-outline"  slot="start"></ion-icon>          
+          <ion-label class="lable">อานิสงส์จากการสวดมนต์</ion-label>
+        </ion-item> 
+
+
+        <ion-item routerLink="/birthday">
+          <ion-icon class="menu-color" name="book-outline" slot="start"></ion-icon>          
+          <ion-label class="lable">พระประจำวันเกิด</ion-label>
+        </ion-item> 
+
+        <ion-item routerLink="/phonenumber">
+          <ion-icon class="menu-color" name="call-outline" slot="start"></ion-icon>          
+          <ion-label class="lable">หมายเลขโทรศัพท์ฉุกเฉิน</ion-label>
+        </ion-item> 
+
+        <ion-item routerLink="/recommend">
+          <ion-icon class="menu-color" name="pencil-outline" slot="start"></ion-icon>          
+          <ion-label class="lable">เขียนรีวิวสถานที่ท่องเที่ยวอื่นๆ</ion-label>
+        </ion-item> 
+
+        <ion-item routerLink="/other-reviews">
+          <ion-icon class="menu-color" name="reader-outline" slot="start"></ion-icon>          
+          <ion-label class="lable">รีวิว สถานที่ท่องเที่ยวอื่นๆ</ion-label>
+        </ion-item> 
+
+
+
+        <ion-item (click)="ShowAlert()" routerLink="/home">
+          <ion-icon class="menu-color" name="log-out-outline" slot="start"></ion-icon>            
+          <ion-label class="lable">ออกจากระบบ</ion-label>
+        </ion-item> 
+
+    </ion-content>
+  </ion-menu>
+
+
+  <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>
