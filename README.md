@@ -1,5 +1,5 @@
-# ionic-project
-Backend - PHP - https://github.com/OhmYimDev/ionic-php.git
+# Build mobile application with Ionic framework
+
 
 <img src="https://user-images.githubusercontent.com/99658011/162214198-535b1543-7c7c-4470-b70c-ade6209c0d84.jpg" width="500">
 
